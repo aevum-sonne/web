@@ -1,0 +1,42 @@
+1.
+    a) 
+    Content-Type: text/plain
+    Content-Length: 14
+    Server: Apache/2.4.41 (Unix) PHP/7.3.8
+
+    b)
+    Content-Type: image/png
+    Content-Length: 200227
+    Server: Apache/2.4.41 (Unix) PHP/7.3.8
+
+    c)
+    Content-Type: image/png
+    Content-Length: 335525
+    Server: Apache/2.4.41 (Unix) PHP/7.3.8
+
+2.
+    a) 
+    Status Code: 404 Not Found 
+    Запрашиваемый URL не найден на сервере.
+    Код ошибки. Необходимо добавить файл mysql_is_a_database_server.html на сервер.
+
+    b) 
+    Status Code: 200 OK 
+    Успешный запрос.
+    Специальное поведение сервера.
+
+    c)
+    Status Code: 302 Found 
+    Запрошенный документ временно доступен по другому URI, указанному в заголовке в поле Location.
+    Специальное поведение сервера.
+
+    d)
+    Status Code: 400 Bad Request
+    Некорректный запрос.
+    Код ошибки. Изменить запрос на how_to_work=hard.
+
+3.
+    Charset - это параметр к заголовку HTTP, указывающий на кодировку символов документа. 
+    Если charset не будет указан, то в зависимости от версии HTML будет выставлена кодировка по умолчанию.
+    Если charset указан неверно, то выведется набор нечитаемых символов. 
+    Пример отображается некорректно из-за кодировки файла (UTF-8), чтобы это исправить, необходимо в теге <meta> указать кодировку UTF-8.
