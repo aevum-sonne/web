@@ -10,8 +10,8 @@
     Server: Apache/2.4.41 (Unix) PHP/7.3.8
 
     c)
-    Content-Type: image/png
-    Content-Length: 335525
+    Content-Type: video/mp4
+    Content-Length: 1137202
     Server: Apache/2.4.41 (Unix) PHP/7.3.8
 
 2.
