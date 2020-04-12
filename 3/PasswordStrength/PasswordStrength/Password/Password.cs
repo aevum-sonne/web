@@ -6,8 +6,8 @@ namespace PasswordStrength
 {
     public class Password
     {
-        private string Value { get; }
         public int Strength { get; private set; }
+        private string Value { get; }
         
         public Password(string password)
         {
@@ -21,7 +21,7 @@ namespace PasswordStrength
             public bool ContainsOnlyLetters, ContainsOnlyDigits;
         }
         
-        private bool IsLatinChar(char ch)
+        private bool IsLatinLetter(char ch)
         {
             return (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z');
         }
@@ -34,7 +34,7 @@ namespace PasswordStrength
                 properties.ContainsOnlyDigits = false;
             }
             
-            else if (IsLatinChar(ch))
+            else if (IsLatinLetter(ch))
             {
                 if (char.IsUpper(ch))
                 {
