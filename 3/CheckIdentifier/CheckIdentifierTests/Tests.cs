@@ -12,7 +12,7 @@ namespace CheckIdentifierTests
         
         public void True_IdentificatorIsValid(string sample)
         {
-            Assert.True(SR3.IndentificatorIsValid(sample));
+            Assert.True(SR3.IdentifierIsValid(sample));
         }
         
         [TestCase("")]
@@ -26,7 +26,7 @@ namespace CheckIdentifierTests
         
         public void False_IdentificatorIsValid(string sample)
         {
-            Assert.False(SR3.IndentificatorIsValid(sample));
+            Assert.False(SR3.IdentifierIsValid(sample));
         }
     }
 }

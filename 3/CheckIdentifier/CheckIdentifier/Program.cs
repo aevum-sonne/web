@@ -13,7 +13,7 @@ namespace CheckIdentifier
 
             var identifier = args[0];
             
-            if (SR3.IndentificatorIsValid(identifier))
+            if (SR3.IdentifierIsValid(identifier))
             {
                 Console.WriteLine("Yes.");
             }
