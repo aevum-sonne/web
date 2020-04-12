@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckIdentifier", "CheckIdentifier\CheckIdentifier.csproj", "{434052B7-B895-42DC-9077-09B79CAD6A30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckIdentifierTests", "CheckIdentifierTests\CheckIdentifierTests.csproj", "{85FCA7E1-00C2-4346-8C20-B84D58F94F32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{434052B7-B895-42DC-9077-09B79CAD6A30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{434052B7-B895-42DC-9077-09B79CAD6A30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{434052B7-B895-42DC-9077-09B79CAD6A30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{434052B7-B895-42DC-9077-09B79CAD6A30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85FCA7E1-00C2-4346-8C20-B84D58F94F32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85FCA7E1-00C2-4346-8C20-B84D58F94F32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85FCA7E1-00C2-4346-8C20-B84D58F94F32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85FCA7E1-00C2-4346-8C20-B84D58F94F32}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
