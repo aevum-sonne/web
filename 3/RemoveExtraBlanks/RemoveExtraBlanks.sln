@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveExtraBlanks", "RemoveExtraBlanks\RemoveExtraBlanks.csproj", "{D2F9F50B-A2CF-4AEB-9050-EF68A7BD033A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveExtraBlanksTests", "RemoveExtraBlanksTests\RemoveExtraBlanksTests.csproj", "{3A9CE2F3-9DB2-4801-AD26-8C3B3EFD84FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2F9F50B-A2CF-4AEB-9050-EF68A7BD033A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2F9F50B-A2CF-4AEB-9050-EF68A7BD033A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2F9F50B-A2CF-4AEB-9050-EF68A7BD033A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2F9F50B-A2CF-4AEB-9050-EF68A7BD033A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A9CE2F3-9DB2-4801-AD26-8C3B3EFD84FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A9CE2F3-9DB2-4801-AD26-8C3B3EFD84FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A9CE2F3-9DB2-4801-AD26-8C3B3EFD84FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A9CE2F3-9DB2-4801-AD26-8C3B3EFD84FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
