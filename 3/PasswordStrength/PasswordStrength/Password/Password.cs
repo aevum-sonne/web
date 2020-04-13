@@ -57,12 +57,12 @@ namespace PasswordStrength
 
         private int GetNumberOfDuplicates()
         {
-            var duplicates = 0; var currDuplicates = 0;
+            var duplicates = 0;
             var valueWithUniqueChars = Value.ToCharArray().Distinct();
             
             foreach (var ch in valueWithUniqueChars)
             {
-                currDuplicates = Value.Count(chr => ch == chr);
+                var currDuplicates = Value.Count(chr => ch == chr);
                 if (currDuplicates > 1)
                 {
                     duplicates += currDuplicates;
