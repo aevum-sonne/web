@@ -1,0 +1,22 @@
+@page
+@using Translator.Data.Models
+@model TranslatorDictionary
+@* @Html.BeginForm("Translate", "TranslatorController", FormMethod.Get); *@
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <title>Translation of @ViewBag.word</title>
+</head>
+<body>
+<div>
+    <h2>@ViewBag.translation</h2>
+</div>
+</body>
+</html>
