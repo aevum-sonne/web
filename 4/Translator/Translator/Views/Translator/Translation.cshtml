@@ -1,7 +1,6 @@
 @page
 @using Translator.Data.Models
 @model TranslatorDictionary
-@* @Html.BeginForm("Translate", "TranslatorController", FormMethod.Get); *@
 
 @{
     Layout = null;
@@ -16,7 +15,7 @@
 </head>
 <body>
 <div>
-    <h2>@ViewBag.translation</h2>
+    <h2 style="text-align:center">@ViewBag.word:    @ViewBag.translation</h2>
 </div>
 </body>
 </html>

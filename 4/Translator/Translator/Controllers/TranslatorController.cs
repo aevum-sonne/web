@@ -1,13 +1,26 @@
+using System;
 using Microsoft.AspNetCore.Mvc;
+using Translator.Data.Interfaces;
 
 namespace Translator.Controllers
 {
-    public class TranslationController : Controller
+    public class TranslatorController : Controller
     {
-        // GET
-        public IActionResult Index()
+        private readonly ITranslatorRepository _translatorRepository;
+
+        public TranslatorController(ITranslatorRepository translatorRepository)
         {
-            return View();
+            _translatorRepository = translatorRepository;
+            _translatorRepository.WriteTranslationsToDictionary("Data/Repositories/Dictionary.txt");
+        }
+
+        // GET
+        public ViewResult Translate(string word)
+        {
+            ViewBag.translation = _translatorRepository.GetTranslation(word);
+            ViewBag.word = word;
+            
+            return View("Translation");
         }
     }
 }
