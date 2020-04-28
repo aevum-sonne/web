@@ -71,7 +71,7 @@ namespace PasswordStrength
 
             return duplicates;
         }
-        
+
         public void FindComplexity()
         {
             var properties = new Properties
@@ -85,28 +85,63 @@ namespace PasswordStrength
             {
                 CountCharProperties(ch, ref properties);
             }
-            
-            Strength += 4 * properties.Len + 4 * properties.Digits - properties.Duplicates;
 
+            Strength += AnalyseStrengthByLength(properties);
+            Strength += AnalyseStrengthByLengthOfDigits(properties);
+            Strength += AnalyseStrengthByUpperCase(properties);
+            Strength += AnalyseStrengthByLowerCase(properties);
+            Strength -= AnalyseStrengthByOnlyDigits(properties);
+            Strength -= AnalyseStrengthByOnlyLetters(properties);
+            Strength -= AnalyseStrengthByDuplicates(properties);
+        }
+
+        private static int AnalyseStrengthByLength(Properties properties)
+        {
+            return 4 * properties.Len;
+        }
+
+        private static int AnalyseStrengthByLengthOfDigits(Properties properties)
+        {
+            return 4 * properties.Digits;
+        }
+
+        private static int AnalyseStrengthByUpperCase(Properties properties)
+        {
             if (properties.UpperCaseChars != 0)
             {
-                Strength += 2 * (properties.Len - properties.UpperCaseChars);
+                return 2 * (properties.Len - properties.UpperCaseChars);
             }
-            
+            else
+            {
+                return 0;
+            }
+        }
+
+        private static int AnalyseStrengthByLowerCase(Properties properties)
+        {
             if (properties.LowerCaseChars != 0)
             {
-                Strength += 2 * (properties.Len - properties.LowerCaseChars);
+                return 2 * (properties.Len - properties.LowerCaseChars);
             }
-            
-            if (properties.ContainsOnlyDigits)
+            else
             {
-                Strength -= properties.Len;
+                return 0;
             }
+        }
 
-            if (properties.ContainsOnlyLetters)
-            {
-                Strength -= properties.Len;
-            }
+        private static int AnalyseStrengthByOnlyDigits(Properties properties)
+        {
+            return properties.ContainsOnlyDigits ? properties.Len : 0;
+        }
+
+        private static int AnalyseStrengthByOnlyLetters(Properties properties)
+        {
+            return properties.ContainsOnlyLetters ? properties.Len : 0;
+        }
+
+        private static int AnalyseStrengthByDuplicates(Properties properties)
+        {
+            return properties.Duplicates;
         }
     }
 }
