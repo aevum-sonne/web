@@ -32,7 +32,7 @@ namespace MyNotesTests
         public void Setup()
         {
             _notes = new MyNotesRepository();
-            _notes.LoadNotes("/Users/user/dev/web/4/MyNotes/MyNotes/Data/Resources/Notes.json");
+            _notes.LoadNotes("../../../../MyNotes/Data/Resources/Notes.json");
         }
 
         [Test]
