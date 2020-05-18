@@ -44,4 +44,4 @@
           ON offer.customer_id = customer.customer_id
         LEFT JOIN dvd
           ON offer.dvd_id = dvd.dvd_id
-     WHERE EXTRACT(YEAR FROM offer_date) = '2020';
+     WHERE STRFTIME('%Y', offer.offer_date) = STRFTIME('%Y', DATE('now'));
