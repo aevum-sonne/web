@@ -225,15 +225,33 @@
          (5, 1, 1),
          (6, 6, 0),
          (7, 6, 0),
-         (8, 6, 0);
+         (8, 6, 0),
+         (9, 2, 1),
+         (10, 4, 1),
+         (11, 5, 1),
+         (12, 1, 1),
+         (13, 1, 1),
+         (14, 1, 1),
+         (15, 1, 1);
 
 --     1) Выбрать всех пользователей из таблицы users,
 --     у которых ВСЕ записи в таблице orders имеют status = 0
-
-
+        SELECT users.name
+          FROM users
+        EXCEPT
+          SELECT users.name
+            FROM users
+              LEFT JOIN orders o ON users.users_id = o.users_id
+           WHERE status != 0;
 
 --     2) Выбрать всех пользователей из таблицы users,
 --     у которых больше 5 записей в таблице orders имеют status = 1
+        SELECT users.name, COUNT(orders.orders_id) AS orders_count
+          FROM users
+            LEFT JOIN orders ON orders.users_id = users.users_id
+         WHERE orders.status = 1
+        GROUP BY orders.users_id
+        HAVING orders_count > 5;
 
 -- 8. (#10)  В чем различие между выражениями HAVING и WHERE?
   -- 1) WHERE можно использовать с SELECT, UPDATE или DELETE, но HAVING можно
